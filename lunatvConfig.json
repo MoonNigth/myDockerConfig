@@ -1,28 +1,54 @@
 {
-  "cache_time": 7200,
-  "api_site": {
-    "dyttzy": {
+  "SourceConfig": [
+    {
+      "key": "dyttzy",
+      "name": "电影天堂资源",
       "api": "http://caiji.dyttzyapi.com/api.php/provide/vod",
-      "name": "电影天堂资源11",
-      "detail": "http://caiji.dyttzyapi.com"
+      "detail": "http://caiji.dyttzyapi.com",
+      "from": "config",
+      "disabled": false
     },
-    "heimuer": {
-      "api": "https://json.heimuer.xyz/api.php/provide/vod",
+    {
+      "key": "heimuer",
       "name": "黑木耳资源",
-      "detail": "https://heimuer.tv"
+      "api": "https://json.heimuer.xyz/api.php/provide/vod",
+      "detail": "https://heimuer.tv",
+      "from": "config",
+      "disabled": false
     },
-    "rycj": {
+    {
+      "key": "rycj",
+      "name": "如意资源",
       "api": "https://cj.rycjapi.com/api.php/provide/vod",
-      "name": "如意资源"
+      "from": "config",
+      "disabled": false
     },
-    "bfzy": {
+    {
+      "key": "bfzy",
+      "name": "暴风资源",
       "api": "https://bfzyapi.com/api.php/provide/vod",
-      "name": "暴风资源"
+      "from": "config",
+      "disabled": false
     },
-    "ffzy": {
-      "api": "http://ffzy5.tv/api.php/provide/vod",
+    {
+      "key": "ffzy",
       "name": "非凡影视",
-      "detail": "http://ffzy5.tv"
+      "api": "http://ffzy5.tv/api.php/provide/vod",
+      "detail": "http://ffzy5.tv",
+      "from": "config",
+      "disabled": false
     }
-  }
+  ],
+  "LiveConfig": [
+    {
+      "key": "CCTV1",
+      "name": "CCTV1",
+      "url": "http://112.123.206.32:808/hls/1/index.m3u8",
+      "ua": "",
+      "epg": "",
+      "from": "custom",
+      "channelNumber": 0,
+      "disabled": false
+    }
+  ]
 }
