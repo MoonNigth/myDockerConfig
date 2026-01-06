@@ -1,0 +1,24 @@
+services:
+  moontv-core:
+    image: ghcr.io/moontechlab/lunatv:latest
+    container_name: moontv-core
+    restart: unless-stopped
+    #network_mode: host
+    ports:
+      - '3000:3000'
+    environment:
+      - TZ=Asia/Shanghai
+      - USERNAME=mxl                        # 管理员账号
+      - PASSWORD=mxl                        # 登录密码
+      - NEXT_PUBLIC_STORAGE_TYPE=upstash    # 采用upstash存储方式
+      - UPSTASH_URL=https://civil-mustang-35946.upstash.io
+      - UPSTASH_TOKEN=AYxqAAIncDFjMjA3MTQ0ZmY5MmQ0MmNjYWFjMjQ4Y2I1NjIwMGZjNnAxMzU5NDY
+      # 如想开放注册功能，可添加:
+      - NEXT_PUBLIC_ENABLE_REGISTER=true
+      - NEXT_PUBLIC_DISABLE_YELLOW_FILTER=true #开启更全面的搜索
+      - ANNOUNCEMENT="公告说明--测试学习使用"
+    volumes: 
+      - moontv:/data/moontv
+volumes:
+  moontv:
+    external: true
